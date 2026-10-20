@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Bebas_Neue, Manrope } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 
 const bebas = Bebas_Neue({
@@ -53,21 +52,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${bebas.variable} ${manrope.variable}`}>
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XZ215YCTV2"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-XZ215YCTV2');
+            `,
+          }}
+        />
+      </head>
       <body className="antialiased">
         {children}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-XZ215YCTV2"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-XZ215YCTV2');
-          `}
-        </Script>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
