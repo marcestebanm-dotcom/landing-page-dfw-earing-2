@@ -1,0 +1,7 @@
+{
+  "name": "DFWearing — Dream · Find · Wear",
+  "description": "DFWearing is opening soon. Clothing from the best brands for women, men, accessories and sneakers. Discover your style — launching October 15.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
