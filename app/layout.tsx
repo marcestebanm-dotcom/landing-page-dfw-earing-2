@@ -16,6 +16,7 @@ const manrope = Manrope({
   display: 'swap',
 })
 
+
 export const metadata: Metadata = {
   title: 'DFWearing — Dream · Find · Wear | Opening October 15',
   description:
@@ -56,7 +57,7 @@ export default function RootLayout({
         {/* Google tag (gtag.js) */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XZ215YCTV2"
+          src="https://www.googletagmanager.com/gtag/js?id=G-CRC9WNN7X1"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -65,7 +66,7 @@ export default function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
-              gtag('config', 'G-XZ215YCTV2');
+              gtag('config', 'G-CRC9WNN7X1');
             `,
           }}
         />
