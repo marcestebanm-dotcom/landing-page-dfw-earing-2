@@ -1,16 +1,17 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Countdown } from '@/components/countdown'
 import { NotifyForm } from '@/components/notify-form'
 import { Sparkle, OrbitLine } from '@/components/graphics'
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="story" className="relative overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-24">
       <OrbitLine className="pointer-events-none absolute -right-24 top-10 hidden h-72 w-[36rem] text-dfw-blue/15 lg:block" />
       <Sparkle className="pointer-events-none absolute left-6 top-24 hidden h-10 w-10 text-dfw-blue/40 lg:block" />
       <Sparkle className="pointer-events-none absolute right-1/3 top-6 hidden h-6 w-6 text-dfw-blue/30 lg:block" />
 
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 pb-16 pt-6 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6 lg:pb-24 lg:pt-10">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-6">
         {/* Left: copy */}
         <div className="relative z-10">
           <span className="inline-flex items-center gap-2 rounded-full border border-dfw-blue/30 bg-soft-cream px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-dfw-blue">
@@ -18,13 +19,13 @@ export function Hero() {
             Opening · October 15
           </span>
 
-          <h1 className="mt-6 font-display text-[clamp(3.5rem,11vw,7rem)] leading-[0.86] text-dfw-blue">
+          <h2 className="mt-6 font-display text-[clamp(3.5rem,11vw,7rem)] leading-[0.86] text-dfw-blue">
             Dream
             <br />
             Find
             <br />
             <span className="text-deep-blue">Wear</span>
-          </h1>
+          </h2>
 
           <p className="mt-6 max-w-md text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
             The new home of the best clothing brands is about to open.
@@ -46,7 +47,7 @@ export function Hero() {
 
         {/* Right: illustration */}
         <div className="relative">
-          <div className="paper-grain relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-dfw-blue/20 bg-soft-cream">
+          <div className="paper-grain relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2rem] border border-dfw-blue/20 bg-soft-cream shadow-lg">
             <Image
               src="/hero-figure.png"
               alt="Blue pencil sketch of a person in streetwear"
